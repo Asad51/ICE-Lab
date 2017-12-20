@@ -1,4 +1,4 @@
-bits = [1 0 1 0 1 1 0 1 1];
+bits = [0 0 1 0 1 1 0 1 1];
 bitrate = 1; % bits per second
 voltage = 1;
 
@@ -44,17 +44,6 @@ m = length(x)/num_of_bits;
 j = 1;
 
 pre_value = 0;
-%for k=1:m:length(x)
-  %if x(k)==prev;
-    %out_bits(j) = 0;
-  %else
-    %out_bits(j) = 1;
-    %prev = x(k);
-  %end
-  %j++;
-%end
-
-%disp(out_bits);
 
 for k=1:m:length(x)
   if k==1
