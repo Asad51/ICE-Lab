@@ -1,5 +1,5 @@
 bits = [1 1 0 1 1 0 0 1];
-bitrate = 2; % bits per second
+bitrate = 1; % bits per second
 
 T = length(bits)/bitrate; % full time of bit sequence
 n = 200;

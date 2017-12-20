@@ -1,4 +1,4 @@
-bits = [0 0 1 0 1 1 0 1 1];
+bits = [1 0 1 0 1 1 0 1 1];
 bitrate = 1; % bits per second
 voltage = 1;
 
@@ -42,18 +42,39 @@ out_bits = zeros(1,num_of_bits);
 m = length(x)/num_of_bits;
 
 j = 1;
-prev = 0;
+
+pre_value = 0;
+%for k=1:m:length(x)
+  %if x(k)==prev;
+    %out_bits(j) = 0;
+  %else
+    %out_bits(j) = 1;
+    %prev = x(k);
+  %end
+  %j++;
+%end
+
+%disp(out_bits);
 
 for k=1:m:length(x)
-  if x(k)==prev;
-    out_bits(j) = 0;
+  if k==1
+    if x(k)==0;
+      out_bits(j) = 0;
+      pre_value = 0;
+    else
+      out_bits(j) = 1;
+      pre_value = x(k);
+    end
   else
-    out_bits(j) = 1;
-    prev = x(k);
+    if x(k)==pre_value;
+      out_bits(j) = 0;
+    else
+      out_bits(j) = 1;
+      pre_value = x(k);
+    end
   end
   j++;
 end
 
 disp(out_bits);
-
 

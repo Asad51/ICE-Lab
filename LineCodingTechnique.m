@@ -1,4 +1,3 @@
-
 bits = [0 0 1 1 0 1 1 0 0 1];
 bitrate = 1; % bits per second
 
@@ -15,7 +14,7 @@ x = zeros(1,length(t)); % output signal
 
 pre_level = 1;
 
-for i = 0:2:length(bits)-1
+for i = 0:2:length(bits)-2
   if bits(i+1) == 0
     if bits(i+2) == 0
       if pre_level>0
