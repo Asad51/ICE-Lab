@@ -73,7 +73,7 @@ for k=1:m:length(signal)
             out_bits(j-3:j+1)=0;
             track_sig_pos = k;
             same_value = 0;
-            j = j+2;
+            j = j+1;
         else
             out_bits(j)=1;
             track_one_pos = j;
