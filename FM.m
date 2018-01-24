@@ -12,7 +12,7 @@ ylabel (' Amplitud(volt)   ');
 
 %% Carrier Signal
 ac = 10;
-fc = 40;
+fc = 100;
 xc = ac*sin(2*pi*fc*t);
 
 subplot(3,1,2); 
